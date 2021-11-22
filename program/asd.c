@@ -88,7 +88,7 @@ DDRC=0x00;
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 PORTD=0x00;
-DDRD=0x00;
+DDRD=0xFF;
 
 // Timer/Counter 0 initialization
 // Clock source: System Clock
@@ -191,6 +191,21 @@ while (1)
         ftoa(suhu,0,temp);
         lcd_gotoxy(0,1);
         lcd_puts(temp);
-        
+                        
+        if(suhu>=28 && suhu<=36){
+            PIND.0=1;
+        }else{
+            PIND.0=0;
+        }              
+        if(suhu>=37 && suhu<=40){
+            PIND.1=1;
+        }else{
+            PIND.1=0;
+        }           
+        if(suhu>=40){
+            PIND.2=1;
+        }else{
+            PIND.2=0;
+        }
       }
 }

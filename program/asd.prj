@@ -109,7 +109,7 @@ WarningExternalDeclaredNeverDefined=1
 WarningUnknownPragma=1
 DebugBootLoader=0
 WatchAVR8LAutoVariables=0
-Build=1
+Build=2
 UseEEPROMLocation0=1
 [Assembler]
 OutputFormat=1
